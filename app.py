@@ -4,7 +4,6 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the trained model
 with open('cq4_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
@@ -16,4 +15,4 @@ def predict():
     return jsonify({'prediction': int(prediction)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')

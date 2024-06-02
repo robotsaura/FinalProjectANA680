@@ -31,7 +31,7 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
         echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
-        docker tag your-app-name registry.heroku.com/final-grade-app/web
+        docker tag final-grade-app registry.heroku.com/final-grade-app/web
         docker push registry.heroku.com/final-grade-app/web
 
     - name: Release to Heroku

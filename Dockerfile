@@ -7,14 +7,14 @@ WORKDIR /app
 # Copy the requirements file
 COPY requirements.txt .
 
-# Install the required packages with the specific scikit-learn version
+# Install the required packages
 RUN pip install -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 8080
 
 # Define the command to run the application
 CMD ["python", "app.py"]

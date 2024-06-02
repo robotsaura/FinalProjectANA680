@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Prediction App</title>
+</head>
+<body>
+    <h1>Welcome to the Grade Prediction App</h1>
+    <form action="/predict" method="post">
+        <label for="test1">Test1:</label>
+        <input type="number" id="test1" name="test1"><br>
+        <label for="test2">Test2:</label>
+        <input type="number" id="test2" name="test2"><br>
+        <label for="test3">Test3:</label>
+        <input type="number" id="test3" name="test3"><br>
+        <label for="test4">Test4:</label>
+        <input type="number" id="test4" name="test4"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

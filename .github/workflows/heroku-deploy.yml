@@ -24,7 +24,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Build Docker image
-      run: docker build . -t your-app-name
+      run: docker build . -t final-grade-app
 
     - name: Login to Heroku Container Registry
       env:
@@ -38,5 +38,5 @@ jobs:
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        heroku container:release web --app your-app-name
+        heroku container:release web --app final-grade-app
 
